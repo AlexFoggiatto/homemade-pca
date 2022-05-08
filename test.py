@@ -11,7 +11,10 @@ output = np.array([[2.29548456, 0.14307812],
 
 pca = mypca.SimplePCA()
 transformation = pca.fit_transform(x)
-if transformation == np.round(output, 2):
+
+
+check_parameters = np.round(transformation, 2) == np.round(output, 2)
+if np.all(check_parameters == True):
     print("mypca is working!!")
 else:
     print("The result is different from expected, please check the again the implementation")
