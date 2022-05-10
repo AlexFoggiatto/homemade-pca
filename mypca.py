@@ -3,6 +3,14 @@ import numpy as np
 
 class SimplePCA:
     def __init__(self, n_components=2):
+        """SimplePCA initialization.
+
+        Parameters
+        ----------
+        n_components : int, default = 2
+        Number of principal components
+
+        """
         self.num_components = n_components
         self.x_std = np.array([0])
 
